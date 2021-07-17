@@ -1,0 +1,3 @@
+(executable
+ (name basicExpress)
+ (libraries base stdio))

@@ -1,0 +1,3 @@
+(executable
+ (name pasika)
+ (libraries base stdio))

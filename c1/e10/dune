@@ -1,0 +1,3 @@
+(executable
+ (name Ackermann)
+ (libraries base stdio))

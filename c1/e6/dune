@@ -1,0 +1,4 @@
+(executable
+ (name NewtonMethod)
+ (libraries base stdio)
+ (modes byte exe))

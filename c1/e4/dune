@@ -1,0 +1,3 @@
+(executable
+ (name choiceFunc)
+ (libraries base))
