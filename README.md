@@ -15,3 +15,4 @@
  (name NewtonMethod)
  (libraries base stdio core))
 ```
+3. trace 
