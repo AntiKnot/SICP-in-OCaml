@@ -1,0 +1,3 @@
+(executable
+ (name matrixFib)
+ (libraries base stdio))
