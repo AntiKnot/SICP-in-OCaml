@@ -1,0 +1,3 @@
+(executable
+ (name fermatPrime)
+ (libraries base stdio))
