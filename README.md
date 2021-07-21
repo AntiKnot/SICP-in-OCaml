@@ -28,3 +28,14 @@ The reason is that the environment variables are not loaded correctly after the 
 ```
 source ~/.profile
 ```
+
+## ref
+- https://ocaml.org/
+- https://realworldocaml.org/
+- https://mitpress.mit.edu/sites/default/files/sicp/index.html
+- https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html
+- https://github-wiki-see.page/m/codewars/codewars.com/wiki/Language-OCaml
+- https://www.cs.cornell.edu/courses/cs3110/2014sp/lecture_notes.php
+- https://codology.net/
+- https://sicp.readthedocs.io/en/latest/index.html
+- https://www.angelfire.com/tx4/cus/pl/pltranslations.html
