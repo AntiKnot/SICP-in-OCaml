@@ -30,7 +30,7 @@ source ~/.profile
 ```
 
 ## todo check 
-- [ ] c1e40
+- [ ] c1e40 Accuracy error
 
 ## ref
 - https://ocaml.org/
