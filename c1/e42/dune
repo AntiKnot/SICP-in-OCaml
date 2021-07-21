@@ -1,0 +1,3 @@
+(executable
+ (name composefg)
+ (libraries base stdio))

@@ -1,0 +1,3 @@
+(executable
+ (name ddouble)
+ (libraries base stdio))
