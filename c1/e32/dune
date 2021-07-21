@@ -1,0 +1,3 @@
+(executable
+ (name moreGeneral)
+ (libraries base stdio))
