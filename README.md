@@ -29,6 +29,9 @@ The reason is that the environment variables are not loaded correctly after the 
 source ~/.profile
 ```
 
+## todo check 
+- [ ] c1e40
+
 ## ref
 - https://ocaml.org/
 - https://realworldocaml.org/
@@ -39,3 +42,5 @@ source ~/.profile
 - https://codology.net/
 - https://sicp.readthedocs.io/en/latest/index.html
 - https://www.angelfire.com/tx4/cus/pl/pltranslations.html
+- https://zhuanlan.zhihu.com/p/49917447
+- https://ocaml.xyz/book/algodiff.html 
