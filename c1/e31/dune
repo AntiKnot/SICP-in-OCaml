@@ -1,0 +1,3 @@
+(executable
+ (name paipaipaipai)
+ (libraries base stdio))
