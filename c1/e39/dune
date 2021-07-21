@@ -1,0 +1,3 @@
+(executable
+ (name tanfrac)
+ (libraries base stdio))
