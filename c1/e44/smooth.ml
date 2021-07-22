@@ -12,6 +12,4 @@ let smooth f =
   fun x -> (f(x+.dx) +. f(x-.dx) +. f(x)) /. 3.0
 
 let smoonth_nth f n = 
-   repeated (smooth f) n
-
-  
+   (repeated smooth n) f 
