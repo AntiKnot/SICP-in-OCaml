@@ -7,6 +7,10 @@ let rec repeated f n =
   if n = 1 then f
   else repeated (compose f f) (n-1)
 
+let rec repeated f n = 
+  if n = 1 then f
+  else compose f (repeated f (n-1))
+
 let dx = 0.00001
 let smooth f = 
   fun x -> (f(x+.dx) +. f(x-.dx) +. f(x)) /. 3.0

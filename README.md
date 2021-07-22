@@ -31,6 +31,7 @@ source ~/.profile
 
 ## todo check 
 - [ ] c1e40 Accuracy error
+- [ ] c1e45 Find the average number of damping
 
 ## ref
 - https://ocaml.org/
