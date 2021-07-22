@@ -1,0 +1,3 @@
+(executable
+ (name segment)
+ (libraries base stdio))

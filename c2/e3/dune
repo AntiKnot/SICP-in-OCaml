@@ -1,0 +1,3 @@
+(executable
+ (name rectangles)
+ (libraries base stdio))
