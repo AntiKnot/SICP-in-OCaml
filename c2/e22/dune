@@ -1,0 +1,3 @@
+(executable
+ (name forEach)
+ (libraries base stdio))
