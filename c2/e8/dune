@@ -1,0 +1,3 @@
+(executable
+ (name subInterval)
+ (libraries stdio base))

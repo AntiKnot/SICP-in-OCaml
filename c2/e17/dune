@@ -1,0 +1,3 @@
+(executable
+ (name lastPair)
+ (libraries stdio base))

@@ -32,6 +32,7 @@ source ~/.profile
 ## todo check 
 - [ ] c1e40 Accuracy error
 - [ ] c1e45 Find the average number of damping
+- [ ] c2e6 church number Don't understand.   :( 
 
 ## ref
 - https://ocaml.org/
