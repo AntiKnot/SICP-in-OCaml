@@ -1,0 +1,3 @@
+(executable
+ (name countTree)
+ (libraries base stdio))
