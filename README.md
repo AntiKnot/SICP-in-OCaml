@@ -33,6 +33,8 @@ source ~/.profile
 - [ ] c1e40 Accuracy error
 - [ ] c1e45 Find the average number of damping
 - [ ] c2e6 church number Don't understand.   :( 
+- [ ] c2e26 Fix the cons and append functions that are understood incorrectly
+- [ ] c2e27 Fix the cons and append functions that are understood incorrectly
 
 ## ref
 - https://ocaml.org/
