@@ -16,7 +16,7 @@ let car lst =
 let cdr lst =
   match lst with
   | Node [] ->raise (Ops "function cdr not enough element.")
-  | Node [_] ->raise (Ops "function cdr not enough element.")
+  | Node [_] -> Node []
   | Node xs -> Node (List.tl xs)
   | _ -> raise (Ops "Unhandle.")
 
@@ -25,42 +25,36 @@ let value l  =
   | Leaf x -> x
   | _ -> raise (Ops "Leaf with out value")
 
-let append nl lf  = 
-  match nl with
-  | Node [xs] -> Node [xs;lf]
-  | Node [] -> Node [lf]
-  | _ -> raise (Ops "Unhandle")
+
+let append nt1 nt2 = 
+  match (nt1,nt2) with
+  | (Node xs1,Node xs2) -> Node (xs1@xs2)
+  | (_, Leaf _) -> raise (Ops "append on 'a -> 'a Leaf" )
+  | (Leaf _,_) ->raise (Ops "append on 'a Leaf -> 'a" )
+
 
 let foo = 
-let l1 = Node [] in
-let l2 = Leaf 1 in
+let l1 = Node [Leaf 1] in
+let l2 = Node [Leaf 2] in
   append l1 l2
 
 let test_foo = 
   (value(car (foo))) = 1
 
-let bar = 
-  let l1 = Node [Leaf 1] in
-  let l2 = Leaf 2 in
-  append l1 l2
 
-let test_bar = 
-  (value(car(cdr (bar)))) = 2
-
-
-let cons nl1 nl2 = 
-  match (nl1,nl2) with
-  | (_,Node [])  -> nl1 
-  | (Node [xs1],Node [xs2]) -> Node [xs1;xs2]
-  | _ -> raise (Ops "Unhandle")
+let cons lf nl = 
+  match nl with 
+  | Node [] -> Node [lf]
+  | Node xs -> Node (List.cons lf xs)
+  | Leaf _ -> raise (Ops "Params type error cant cons a' Leaf to a' Leaf.")
 
 
 let zoo = 
-  let nl1 = Node [Leaf 1] in
-  let nl2 = Node [Leaf 2] in
+  let nl1 = Leaf 2 in
+  let nl2 = Node [Leaf 1] in
   cons nl1 nl2
 let test_zoo = 
-  (value(car(cdr (zoo)))) = 2
+  (value(car(cdr (zoo)))) = 1
 
 let mylist lf1 lf2 = 
   Node [lf1;lf2]
@@ -73,6 +67,5 @@ let test_mylist =
 
 let () = 
 printf "%B\n" (test_foo);;
-printf "%B\n" (test_bar);;
 printf "%B\n" (test_zoo);;
 printf "%B\n" (test_mylist);;
