@@ -1,0 +1,3 @@
+(executable
+ (name conventional)
+ (libraries stdio))
