@@ -69,9 +69,7 @@ let rec accumulate f acc sequence =
   | _  -> raise (Ops "accumulate")
 
 let accumulate_n nst=
-  (* accumulate foo (Node []) nst 
-  Node [] 卡住了我半天 init没有匹配正确。
-  *)
+  (* fix: accumulate foo (Node []) nst  error need three init value *)
   accumulate foo (Node [Leaf 0;Leaf 0;Leaf 0]) nst
 
 let rec equal_tree t1 t2 =
