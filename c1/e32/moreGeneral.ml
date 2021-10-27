@@ -1,5 +1,4 @@
 open Base 
-open Stdio
 
 let rec sum term a next b =
   if a > b then 0

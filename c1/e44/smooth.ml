@@ -3,9 +3,9 @@ open Base
 let compose f g =  
   fun x -> f (g x)
 
-let rec repeated f n = 
+(* let rec repeated f n = 
   if n = 1 then f
-  else repeated (compose f f) (n-1)
+  else repeated (compose f f) (n-1) *)
 
 let rec repeated f n = 
   if n = 1 then f
