@@ -18,6 +18,9 @@
 3. trace 
 In ocaml, I did not find a command similar to `trace` in lisp. So I always paste it into utop.
 
+4. answer new question
+`dune init executable $NAME`
+
 ## Nonsense
 - As long as the prefix syntax is supported, it is not so important as to whether it is used or not. But the prefix suspension style looks better.
 
