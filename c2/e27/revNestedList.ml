@@ -1,6 +1,6 @@
 open Stdio
 
-exception Ops of string
+exception Ops of string;;
 
 type 'a nestedlist =
   | Leaf of 'a
@@ -78,3 +78,29 @@ let () =
   printf "%N\n" (value(car(cdr(car(bar)))));;
   printf "%N\n" (value(car(car(cdr(bar)))));;
   printf "%N\n" (value(car(cdr(car(cdr(bar))))));;
+
+exception Ops of string;;
+type 'a nestedlist =
+  | A of 'a
+  | L of 'a nestedlist list;;
+
+let rec append nl1 nl2 =
+  match (nl1,nl2) with
+  | (L xs1, L xs2) -> L (xs1 @ xs2)
+  | _ -> raise (Ops "append failed");;
+
+let rec cons x xs =
+  match xs with
+  | L xs -> L (x::xs)
+  | _ -> raise (Ops "cons failed");;
+
+let reverse nl = 
+  let rec rev_acc acc nl = 
+    match nl with
+    | L [] -> acc
+    | L (hd::tl) -> rev_acc (cons (rev_acc (L []) hd) acc) (L tl)
+    | A x -> A x in
+    rev_acc (L []) nl
+
+let nl = L [A 1;L [A 2;L [A 3;L [A 4;L [A 5]]]]];;
+reverse nl;;
