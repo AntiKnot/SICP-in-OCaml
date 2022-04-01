@@ -54,5 +54,23 @@ let () =
 printf "%B\n" (test_bar);;
 
 
+exception Ops of string;;
+type 'a nestedlist =
+  | A of 'a
+  | L of 'a nestedlist list;;
 
+let rec cons x xs =
+  match xs with
+  | L xs -> L (x::xs)
+  | _ -> raise (Ops "cons failed");;
 
+let fringe nl = 
+  let rec acc_fringe acc nl =
+    match nl with
+    | L [] -> acc
+    | L (x::xs) -> acc_fringe (acc@(acc_fringe [] x)) (L xs) 
+    | A x -> [x] in
+    acc_fringe [] nl;;
+let nl = L [A 1;L [A 2;L [A 3;L [A 4;L [A 5]]]]];;
+
+assert ((fringe nl) = [1;2;3;4;5]);;
