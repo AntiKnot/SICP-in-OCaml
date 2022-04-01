@@ -74,4 +74,33 @@ let zoo =
 let () = 
   printf "%N\n" (value(car(car(bar))));;
   printf "%N\n" (value(car(cdr(car(cdr(cdr(foo)))))));;
-  printf "%N\n" (value(car(cdr(car(cdr(car(cdr(car(cdr(car(cdr(car(cdr(zoo))))))))))))))
+  printf "%N\n" (value(car(cdr(car(cdr(car(cdr(car(cdr(car(cdr(car(cdr(zoo))))))))))))));;
+
+
+type 'a nextedlist = 
+| Atom of 'a 
+| List of 'a nextedlist list;;
+
+let head xs = 
+  match xs with
+  | List [] -> raise (Ops "head not enough element.")
+  | List (x::_) -> x
+  | Atom _ ->  raise (Ops "");;
+
+let tail xs = 
+  match xs with
+  | List [] -> raise (Ops "tail not enough element.")
+  | List (_::xs) -> List xs
+  | Atom _ -> raise (Ops "");;
+
+let v atom = 
+  match atom with
+  | Atom x -> x
+  | _ -> raise (Ops "Unhandle")
+
+let nl1 =  List [Atom 1; Atom 3; List [Atom 5; Atom 7]; Atom 9];;
+let () = print_int (nl1 |> tail |> tail |> head |> tail |> head |> v);;
+let nl2 =  List [List [Atom 7]];;
+let () = print_int (nl2 |> head |> head |> v );;
+let nl3 = List [Atom 1; List[Atom 2; List[Atom 3; List [Atom 4; List [Atom 5;List [Atom 6; List [Atom 7]]]]]]];;
+let () = print_int (nl3|>tail|>head|>tail|>head|>tail|>head|>tail|>head|>tail|>head|>tail|>head|>head|>v);;
