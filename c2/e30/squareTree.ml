@@ -2,8 +2,9 @@ open Stdio
 
 exception Ops of string
 
-type 'a nestedlist = Leaf of 'a
-                   | Node of 'a nestedlist list
+type 'a nestedlist = 
+| Leaf of 'a
+| Node of 'a nestedlist list;; 
 
 let car lst =
   match lst with
