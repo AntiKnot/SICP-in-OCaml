@@ -54,7 +54,6 @@ let () =
 printf "%B\n" (test_bar);;
 
 
-exception Ops of string;;
 type 'a nestedlist =
   | A of 'a
   | L of 'a nestedlist list;;
